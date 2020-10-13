@@ -824,7 +824,7 @@ Citizen.CreateThread(function()
 	
 	local verFile = LoadResourceFile(GetCurrentResourceName(), "version.json")
 	local curVersion = json.decode(verFile).version
-	local updatePath = "/Bluethefurry/EasyAdmin"
+	local updatePath = "/Blumlaut/EasyAdmin-RedM"
 	local resourceName = "EasyAdmin ("..GetCurrentResourceName()..")"
 	function checkVersion(err,response, headers)
 		if err == 200 then
@@ -854,7 +854,7 @@ Citizen.CreateThread(function()
 	end
 	
 	function checkVersionHTTPRequest()
-		PerformHttpRequest("https://raw.githubusercontent.com/Bluethefurry/EasyAdmin/master/version.json", checkVersion, "GET")
+		PerformHttpRequest("https://raw.githubusercontent.com/"..updatePath.."/master/version.json", checkVersion, "GET")
 	end
 	
 	function loopUpdateBlacklist()

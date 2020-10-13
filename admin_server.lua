@@ -90,8 +90,6 @@ AddEventHandler("EasyAdmin:amiadmin", function()
 		CachedPlayers[source] = {id = source, name = GetPlayerName(source), identifiers = GetPlayerIdentifiers(source), immune = DoesPlayerHavePermission(source,"easyadmin.immune")}
 	end
 end)
-	end
-end)
 
 
 RegisterServerEvent("EasyAdmin:requestCachedPlayers")
